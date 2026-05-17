@@ -1,12 +1,22 @@
-# React + Vite
+# Tenzies Game 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Szybka i wciągająca gra kościana zbudowana w oparciu o React. Celem gracza jest wylosowanie takich samych wartości na wszystkich 10 kostkach w jak najmniejszej liczbie rzutów. Gra zawiera licznik rzutów, efekty wizualne po wygranej oraz podstawowe usprawnienia z zakresu dostępności (ARIA).
 
-Currently, two official plugins are available:
+## Podgląd projektu
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Zrzut ekranu z gry Tenzies](screenshots/tenzies.png)
 
-## Expanding the ESLint configuration
+## Technologie
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React 19**
+* **Vite**
+* **Tailwind CSS**
+* **Nanoid**
+* **React Confetti**
+
+## Zasady gry
+
+1. Gra rozpoczyna się z 10 losowymi kostkami.
+2. Kliknięcie na wybraną kostkę "zamraża" ją (`isHeld`), co zabezpiecza ją przed kolejnym rzutem.
+3. Kliknięcie przycisku **Roll** losuje nowe wartości dla pozostałych, niezablokowanych kostek.
+4. Gra kończy się sukcesem, gdy wszystkie kostki mają tę samą wartość.
